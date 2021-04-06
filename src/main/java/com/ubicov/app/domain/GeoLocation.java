@@ -30,6 +30,7 @@ public class GeoLocation {
     private String longitude;
     private String latitude;
 
+    //Default Constructor
     public GeoLocation(String ladCode, String district, String longitude, String latitude) {
         this.ladCode = ladCode;
         this.district = district;

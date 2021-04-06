@@ -9,12 +9,16 @@ package com.ubicov.app.controller;
 import com.ubicov.app.domain.GeoLocation;
 import com.ubicov.app.service.GeoLocationService;
 import com.ubicov.app.util.GeoLocationNotFoundException;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 public class GeoLocationController {
 
+    @Autowired
     private GeoLocationService geoLocationService;
 
     public GeoLocationController(GeoLocationService geoLocationService) {
@@ -24,6 +28,11 @@ public class GeoLocationController {
     @GetMapping("/loc/{district}")
     private GeoLocation getGeoLocation(@PathVariable String district) {
         return geoLocationService.getLocByDistrict(district);
+    }
+
+    @GetMapping("/loc")
+    private List<GeoLocation> getGeoByAreaCode() {
+        return geoLocationService.getAll();
     }
 
     @ExceptionHandler

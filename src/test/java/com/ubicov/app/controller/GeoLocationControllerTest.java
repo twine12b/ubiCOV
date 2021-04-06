@@ -1,7 +1,7 @@
 /**
  * @Author - Richard Renaud
  * WebMvc Test Slice - only tests the controller.
- * <p>
+ *
  * Due to time restraints the tests here are limited but what has been achieved should give
  * a good indication on what could be done in the future.
  */

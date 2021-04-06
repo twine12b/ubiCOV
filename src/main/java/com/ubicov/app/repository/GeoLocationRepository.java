@@ -14,6 +14,8 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface GeoLocationRepository extends JpaRepository<GeoLocation, Long> {
 
-    @Query(value = "SELECT * FROM geo_location g WHERE g.district = ?1", nativeQuery = true)
+    @Query(value = "SELECT * FROM geo_location g WHERE g.district= ?1", nativeQuery = true)
     GeoLocation findByDistrict(String district);
+
+
 }
