@@ -31,7 +31,7 @@ public class GeoLocationController {
     }
 
     @GetMapping("/loc")
-    private List<GeoLocation> getGeoByAreaCode() {
+    private List<GeoLocation> getAllGeoLocation() {
         return geoLocationService.getAll();
     }
 
