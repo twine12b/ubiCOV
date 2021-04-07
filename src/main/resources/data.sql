@@ -34,3 +34,6 @@ VALUES (1, 'E09000001', 'City of London', -0.07969517196215747, 51.5196779388711
 
 INSERT INTO furlough(id, lad_code, district, date, female_furloughed, male_furloughed, total_furloughed)
 VALUES (1, 'E09000001', 'City of London', '2020-12-31', 7100, 8100, 15200);
+
+INSERT INTO covid_data(id, lad_code,district, date, new_cases, new_deaths)
+VALUES (1, 'E09000001', 'City of London', '2020-12-31', 7100, 8100);
